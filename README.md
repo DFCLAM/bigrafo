@@ -12,4 +12,9 @@ La cartella RDFgraph contiene esempi di dati rappresentati in RDF secondo l'onto
 
 In particolare, il file BIGRAFO_work_0001.ttl rappresenta - in forma di *test* - alcuni dati su "Al di là della speranza" di Franco Fortini in tre diverse manifestazioni.
 
-## SPARQL queries
+## SPARQL query
+Le seguenti query in SPARQL sono esempi per testare l'ontologia e la rappresentazione dei dati. Allo stato attuale, le query sono espresse su un triplestore RDF locale. Nel contesto del progetto, sarà data l'opportunità di accedere ai dati pubblicamenti tramite interfaccia Web.
+
+Esempio 1
+
+Esempio 2
