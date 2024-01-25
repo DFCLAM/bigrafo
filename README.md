@@ -8,4 +8,8 @@ L'ontologia Bigrafo è basata sulla famiglia delle SPAR Ontologies (http://www.s
 Allo stato attuale dello sviluppo, si sta lavorando all'adattamento di FaBio per le esigenze di Bigrafo, ad es., rimuovendo alcune sotto-classi non necessarie al nostro contesto applicativo e aggiungendo allo stesso tempo vari elementi utili.
 
 ## Cartella RDFgraph
-La cartella RDFgraph contiene esempi di dati rappresentati in RDF secondo l'ontologia Bigrafo
+La cartella RDFgraph contiene esempi di dati rappresentati in RDF secondo l'ontologia Bigrafo.
+
+In particolare, il file BIGRAFO_work_0001.ttl rappresenta - in forma di *test* - alcuni dati su "Al di là della speranza" di Franco Fortini in tre diverse manifestazioni.
+
+## SPARQL queries
