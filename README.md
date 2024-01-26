@@ -30,9 +30,9 @@ prism:<http://prismstandard.org/namespaces/basic/2.0/>
 ontobigrafo: <https://www.onto.bigrafo.it/> # NAMESPACE di TESTING
 ```
 
-QUERY 1: seleziona le manifestazioni (?manif) del _work_ (?work) "Al di là della speranza". 
-Per le manifestazioni, seleziona il titolo (?manifTitle), la tipologia di pubblicazione (?manifPubTy) e il testo di cui sono parte (?manifCol).
-Per ?manifCol, seleziona il titolo (?colTitle), la data di pubblicazione (?pubDate), il tipo di pubblicazione (?manifColPubTy) e - se disponibile (OPTIONAL) - il nome dalla casa editrice (?publisherLabel) e del luogo di pubblicazione (?pubPlaceLabel).
+QUERY 1: seleziona le manifestazioni (_?manif_) del _work_ (_?work_) "Al di là della speranza". 
+Per le manifestazioni, seleziona il titolo (_?manifTitle_), la tipologia di pubblicazione (_?manifPubTy_) e il testo di cui sono parte (_?manifCol_).
+Inoltre, per questi ultimi testi, seleziona il titolo (_?colTitle_), la data di pubblicazione (_?pubDate_), il tipo di pubblicazione (_?manifColPubTy_) e - se disponibile (_OPTIONAL_) - il nome dalla casa editrice (_?publisherLabel_) e del luogo di pubblicazione (_?pubPlaceLabel_).
 
 ```sparql
 SELECT ?manif ?manifTitle ?manifPubTy ?manifCol
