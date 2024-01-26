@@ -31,7 +31,7 @@ prism:<http://prismstandard.org/namespaces/basic/2.0/>
 ontobigrafo: <https://www.onto.bigrafo.it/> # NAMESPACE di TESTING
 ```
 
-QUERY 1: seleziona le manifestazioni (_?manif_) del _work_ (_?work_) "Al di là della speranza". 
+*QUERY 1*: seleziona le manifestazioni (_?manif_) del _work_ (_?work_) "Al di là della speranza". 
 Per le manifestazioni, seleziona il titolo (_?manifTitle_), la tipologia di pubblicazione (_?manifPubTy_) e il testo di cui sono parte (_?manifCol_).
 Inoltre, per questi ultimi testi, seleziona il titolo (_?colTitle_), la data di pubblicazione (_?pubDate_), il tipo di pubblicazione (_?manifColPubTy_) e - se disponibile (_OPTIONAL_) - il nome dalla casa editrice (_?publisherLabel_) e del luogo di pubblicazione (_?pubPlaceLabel_).
 
@@ -61,7 +61,7 @@ RESULT (via GraphDB by Ontotext, free version)
 ![Local Image](RDFgraph/query1_result.png)
 
 
-QUERY 2: Con lo scopo di semplificare l'interrogazione dei dati, questa è una variante della QUERY 1 in cui s'interroga direttamente la manifestazione senza il _work_ corrispondente. 
+*QUERY 2*: Con lo scopo di semplificare l'interrogazione dei dati, questa è una variante della QUERY 1 in cui s'interroga direttamente la manifestazione senza il _work_ corrispondente. 
  
 ```sparql
 SELECT ?manifTitle ?manifPubTy ?colTitle ?pubDate ?volPubTy ?publisherLabel ?pubPlaceLabel
@@ -83,7 +83,7 @@ WHERE {
 ```
 ![Local Image](RDFgraph/query2_result.png)
 
-QUERY 3: seleziona le manifestazioni pubblicate tra il 1980 e il 1990 (_FILTER_) di tipo "poesia in volume" (_ontobigrafo:PoesiaInVolume_) e i testi in cui sono incluse.
+*QUERY 3*: seleziona le manifestazioni pubblicate tra il 1980 e il 1990 (_FILTER_) di tipo "poesia in volume" (_ontobigrafo:PoesiaInVolume_) e i testi in cui sono incluse.
 
 ```sparql
 SELECT ?manifTitle ?colTitle ?pubDate ?publisherLabel ?pubPlaceLabel
