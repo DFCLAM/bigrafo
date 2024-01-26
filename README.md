@@ -56,7 +56,7 @@ OPTIONAL
               fabio:hasPlaceOfPublication/rdfs:label ?pubPlaceLabel.}
 } 
 ```
-![Local Image](./query1_result.jpg)
+![Local Image](RDFgraph/query1_result.jpg)
 
 
 QUERY 2:
