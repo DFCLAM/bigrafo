@@ -35,7 +35,7 @@ Per le manifestazioni, seleziona il titolo (_?manifTitle_), la tipologia di pubb
 Inoltre, per questi ultimi testi, seleziona il titolo (_?colTitle_), la data di pubblicazione (_?pubDate_), il tipo di pubblicazione (_?manifColPubTy_) e - se disponibile (_OPTIONAL_) - il nome dalla casa editrice (_?publisherLabel_) e del luogo di pubblicazione (_?pubPlaceLabel_).
 
 ```sparql
-SELECT ?manif ?manifTitle ?manifPubTy ?manifCol
+SELECT ?manifTitle ?manifPubTy 
 ?colTitle ?manifColPubTy ?pubDate ?publisherLabel ?pubPlaceLabel
 WHERE {
 	?work a fabio:Work;
@@ -55,5 +55,11 @@ OPTIONAL
     {?manifCol dcterms:publisher/rdfs:label ?publisherLabel;
               fabio:hasPlaceOfPublication/rdfs:label ?pubPlaceLabel.}
 } 
-'''
+```
+![Local Image](./query1_result.jpg)
+
+
+QUERY 2:
+ 
+
 
