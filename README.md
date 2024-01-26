@@ -30,4 +30,30 @@ prism:<http://prismstandard.org/namespaces/basic/2.0/>
 ontobigrafo: <https://www.onto.bigrafo.it/> # NAMESPACE di TESTING
 ```
 
-Esempio 2
+QUERY 1: seleziona le manifestazioni (?manif) del _work_ (?work) "Al di là della speranza". 
+Per le manifestazioni, seleziona il titolo (?manifTitle), la tipologia di pubblicazione (?manifPubTy) e il testo di cui sono parte (?manifCol).
+Per ?manifCol, seleziona il titolo (?colTitle), la data di pubblicazione (?pubDate), il tipo di pubblicazione (?manifColPubTy) e - se disponibile (OPTIONAL) - il nome dalla casa editrice (?publisherLabel) e del luogo di pubblicazione (?pubPlaceLabel).
+
+```sparql
+SELECT ?manif ?manifTitle ?manifPubTy ?manifCol
+?colTitle ?manifColPubTy ?pubDate ?publisherLabel ?pubPlaceLabel
+WHERE {
+	?work a fabio:Work;
+        schema:author/schema:name "Franco Fortini";
+        dcterms:title "Al di là della speranza";
+        fabio:hasManifestation ?manif.  
+    
+  ?manif dcterms:title ?manifTitle;
+          ontobigrafo:hasPublicationType ?manifPubTy;
+        	frbr:partOf ?manifCol.
+    
+  ?manifCol dcterms:title ?colTitle;
+            prism:publicationDate ?pubDate;
+            ontobigrafo:hasPublicationType ?manifColPubTy;
+    
+OPTIONAL
+    {?manifCol dcterms:publisher/rdfs:label ?publisherLabel;
+              fabio:hasPlaceOfPublication/rdfs:label ?pubPlaceLabel.}
+} 
+'''
+
