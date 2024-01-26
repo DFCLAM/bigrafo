@@ -56,10 +56,29 @@ OPTIONAL
               fabio:hasPlaceOfPublication/rdfs:label ?pubPlaceLabel.}
 } 
 ```
+RESULT (via GraphDB by Ontotext, free version)
 ![Local Image](RDFgraph/query1_result.png)
 
 
-QUERY 2:
+QUERY 2: Con lo scopo di semplificare l'interrogazione dei dati, questa è una variante della QUERY 1 in cui s'interroga direttamente la manifestazione senza il _work_ corrispondente. 
  
+```sparql
+SELECT ?manifTitle ?manifPubTy ?colTitle ?pubDate ?volPubTy ?publisherLabel ?pubPlaceLabel
+WHERE { 
+     	?manif a fabio:Manifestation;
+               schema:author/schema:name "Franco Fortini";
+ 		dcterms:title ?manifTitle;  
+         	ontobigrafo:hasPublicationType ?manifPubTy;
+       		frbr:partOf ?manifCol.
+   		
 
+        ?manifCol dcterms:title ?colTitle;
+                 prism:publicationDate ?pubDate;
+                 ontobigrafo:hasPublicationType ?volPubTy.
+
+	OPTIONAL{?manifCol dcterms:publisher/rdfs:label ?publisherLabel;
+ 			   fabio:hasPlaceOfPublication/rdfs:label ?pubPlaceLabel}  
+ }
+```
+![Local Image](RDFgraph/query2_result.png)
 
