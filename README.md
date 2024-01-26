@@ -28,6 +28,6 @@ dcterms: <http://purl.org/dc/terms/>
 schema: <https://schema.org/>
 prism:<http://prismstandard.org/namespaces/basic/2.0/>
 ontobigrafo: <https://www.onto.bigrafo.it/> # NAMESPACE di TESTING
-'''
+```
 
 Esempio 2
