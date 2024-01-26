@@ -22,6 +22,7 @@ Le seguenti query in SPARQL sono esempi per testare l'ontologia e la rappresenta
 Lista dei *namespaces* utilizzati nelle query:
 ```sparql
 rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+xsd: <http://www.w3.org/2001/XMLSchema#>
 fabio: <http://purl.org/spar/fabio/>
 frbr: <http://purl.org/vocab/frbr/core#> # DA AGGIORNARE con LRMoo
 dcterms: <http://purl.org/dc/terms/>
