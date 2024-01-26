@@ -17,9 +17,11 @@ Il file BIGRAFO_work_0001.ttl rappresenta - sotto forma di *test* - alcuni dati 
 - "Al di là della speranza", pubblicata sulla rivista "Officina" (8 novembre 1957).
 
 ## SPARQL query
-Le seguenti query in SPARQL sono esempi per testare l'ontologia e la rappresentazione dei dati. Allo stato attuale, le query sono espresse su un triplestore RDF locale. Nel contesto del progetto, sarà data l'opportunità di accedere ai dati pubblicamenti tramite interfaccia Web.
+Le seguenti query in SPARQL sono esempi per testare l'ontologia e la rappresentazione dei dati. Allo stato attuale, le query sono espresse su un triplestore RDF locale (tramite GraphDB, Ontotext, free version). 
+Nel contesto del progetto, sarà data l'opportunità di accedere ai dati pubblicamente tramite interfaccia Web.
 
 Lista dei *namespaces* utilizzati nelle query:
+
 ```sparql
 rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -57,7 +59,7 @@ OPTIONAL
               fabio:hasPlaceOfPublication/rdfs:label ?pubPlaceLabel.}
 } 
 ```
-RESULT (via GraphDB by Ontotext, free version)
+RISULTATO di Q1
 ![Local Image](RDFgraph/query1_result.png)
 
 
@@ -81,6 +83,7 @@ WHERE {
  			   fabio:hasPlaceOfPublication/rdfs:label ?pubPlaceLabel}  
  }
 ```
+RISULTATO di Q2
 ![Local Image](RDFgraph/query2_result.png)
 
 *QUERY 3*: seleziona le manifestazioni pubblicate tra il 1980 e il 1990 (_FILTER_) di tipo "poesia in volume" (_ontobigrafo:PoesiaInVolume_) e i testi in cui sono incluse.
@@ -102,6 +105,7 @@ WHERE {
     FILTER (?pubDate >= "1980"^^xsd:gYear && ?pubDate <= "1990"^^xsd:gYear)
 }
 ```
+RISULTATO di Q3
 ![Local Image](RDFgraph/query3_result.png)
 
 
