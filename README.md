@@ -82,3 +82,26 @@ WHERE {
 ```
 ![Local Image](RDFgraph/query2_result.png)
 
+QUERY 3: seleziona le manifestazioni pubblicate tra il 1980 e il 1990 (_FILTER_) di tipo "poesia in volume" (_ontobigrafo:PoesiaInVolume_) e i testi in cui sono incluse.
+
+```sparql
+SELECT ?manifTitle ?colTitle ?pubDate ?publisherLabel ?pubPlaceLabel
+WHERE {
+	?manif a fabio:Manifestation;
+               schema:author/schema:name "Franco Fortini";
+    		dcterms:title ?manifTitle;  
+         	ontobigrafo:hasPublicationType ontobigrafo:PoesiaInVolume;
+       		frbr:partOf ?manifCol.
+   		
+        ?manifCol dcterms:title ?colTitle;
+                 prism:publicationDate ?pubDate;
+                 dcterms:publisher/rdfs:label ?publisherLabel;
+		fabio:hasPlaceOfPublication/rdfs:label ?pubPlaceLabel
+
+    FILTER (?pubDate >= "1980"^^xsd:gYear && ?pubDate <= "1990"^^xsd:gYear)
+}
+```
+![Local Image](RDFgraph/query3_result.png)
+
+
+
