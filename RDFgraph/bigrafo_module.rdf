@@ -14,7 +14,7 @@
      xmlns:schema="https://schema.org/"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://www.onto.bigrafo.it">
-        <owl:imports rdf:resource="http://purl.org/spar/fabio/2019-02-19"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/DFCLAM/bigrafo/main/RDFgraph/fabio_module.rdf"/>
         <rdfs:comment>This file contains the knowledge graph for the Bigrafo project. It consists of the core release of FRBR, a portion of the FaBiO ontology, and a small set of classes/relations imported from existing ontologies like Schema.org, Dbpedia, and others.
 Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     </owl:Ontology>
