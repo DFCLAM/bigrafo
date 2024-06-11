@@ -3,7 +3,7 @@ Questa repository contiene i file relativi all'ontologia per il progetto BiGrafo
 Il lavoro di ricerca sul progetto è attualmente in corso; pertanto sia l'ontologia, sia la sua istanziazione con i dati Bigrafo sono in fase di sviluppo e testing.  
 
 ## Ontologia BIGRAFO
-L'ontologia Bigrafo è basata sulla famiglia delle SPAR Ontologies (http://www.sparontologies.net/), in particolare su FaBio (http://www.sparontologies.net/ontologies/fabio). Più nel dettaglio, l'ontologia consiste in una porzione di FaBio e una serie di elementi di modellazione funzionali alla rappresentazione dei dati nel contesto di Bigrafo (si veda su questa repository la cartella <RDFgraph>. 
+L'ontologia Bigrafo è basata sulla famiglia delle SPAR Ontologies (http://www.sparontologies.net/), in particolare su FaBio (http://www.sparontologies.net/ontologies/fabio). Più nel dettaglio, l'ontologia consiste in una porzione di FaBio e una serie di elementi di modellazione funzionali alla rappresentazione dei dati nel contesto di Bigrafo (si veda su questa repository la cartella RDFgraph). 
 
 ## Cartella RDFgraph
 La cartella RDFgraph contiene esempi di dati rappresentati in RDF secondo l'ontologia Bigrafo.
