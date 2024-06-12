@@ -1,20 +1,16 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://www.onto.bigrafo.it#"
-     xml:base="https://www.onto.bigrafo.it"
+<rdf:RDF xmlns="http://www.semanticweb.org/emiliosanfilippo/ontologies/2024/5/untitled-ontology-645/"
+     xml:base="http://www.semanticweb.org/emiliosanfilippo/ontologies/2024/5/untitled-ontology-645/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:dbo="http://dbpedia.org/ontology/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2008/05/skos#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/"
-     xmlns:schema="https://schema.org/"
-     xmlns:dcterms="http://purl.org/dc/terms/">
+     xmlns:skos1="http://www.w3.org/2008/05/skos#">
     <owl:Ontology rdf:about="https://www.onto.bigrafo.it">
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/DFCLAM/bigrafo/main/RDFgraph/fabio_module.rdf"/>
+        <owl:imports rdf:resource="http://purl.org/spar/fabio/2019-02-19"/>
         <rdfs:comment>This file contains the knowledge graph for the Bigrafo project. It consists of the core release of FRBR, a portion of the FaBiO ontology, and a small set of classes/relations imported from existing ontologies like Schema.org, Dbpedia, and others.
 Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     </owl:Ontology>
@@ -37,7 +33,6 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/genre">
         <rdfs:domain rdf:resource="http://purl.org/spar/fabio/Work"/>
         <rdfs:range rdf:resource="http://dbpedia.org/ontology/Genre"/>
-        <rdfs:comment>from Dbpedia</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -47,15 +42,6 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://schema.org/publicationType">
         <rdfs:domain rdf:resource="http://purl.org/spar/fabio/Manifestation"/>
         <rdfs:range rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
-        <rdfs:comment>from Schema.org</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.onto.bigrafo.it#relazione-prova -->
-
-    <owl:ObjectProperty rdf:about="https://www.onto.bigrafo.it#relazione-prova">
-        <rdfs:comment>this is for testing purposes</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -80,6 +66,65 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     <!-- https://www.onto.bigrafo.it#PublicationType -->
 
     <owl:Class rdf:about="https://www.onto.bigrafo.it#PublicationType"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.onto.bigrafo.it#narrativa -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#narrativa">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#parole_per_musica -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#parole_per_musica">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#poesia -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#poesia">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#pubblicistica -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#pubblicistica">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#saggistica -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#saggistica">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#testi_per_film -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#testi_per_film">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Genre"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
