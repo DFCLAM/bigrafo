@@ -7,8 +7,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:skos="http://www.w3.org/2008/05/skos#">
+     xmlns:skos="http://www.w3.org/2008/05/skos#"
+     xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="https://www.onto.bigrafo.it">
         <owl:imports rdf:resource="https://raw.githubusercontent.com/DFCLAM/bigrafo/main/RDFgraph/fabio_module.rdf"/>
         <rdfs:comment>This file contains the knowledge graph for the Bigrafo project. It consists of the core release of FRBR, a portion of the FaBiO ontology, and a small set of classes/relations imported from existing ontologies like Schema.org, Dbpedia, and others.
@@ -96,10 +96,34 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     
 
 
+    <!-- https://www.onto.bigrafo.it#plaquettes_e_opuscoli -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#plaquettes_e_opuscoli">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.onto.bigrafo.it#poesia -->
 
     <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#poesia">
         <rdf:type rdf:resource="http://dbpedia.org/ontology/Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#poesia_in_rivista -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#poesia_in_rivista">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#poesia_in_volume -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#poesia_in_volume">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
     </owl:NamedIndividual>
     
 
