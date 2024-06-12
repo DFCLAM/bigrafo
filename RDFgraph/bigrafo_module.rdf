@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/emiliosanfilippo/ontologies/2024/5/untitled-ontology-645/"
-     xml:base="http://www.semanticweb.org/emiliosanfilippo/ontologies/2024/5/untitled-ontology-645/"
+<rdf:RDF xmlns="https://www.onto.bigrafo.it#"
+     xml:base="https://www.onto.bigrafo.it"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -8,9 +8,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:skos1="http://www.w3.org/2008/05/skos#">
+     xmlns:skos="http://www.w3.org/2008/05/skos#">
     <owl:Ontology rdf:about="https://www.onto.bigrafo.it">
-        <owl:imports rdf:resource="http://purl.org/spar/fabio/2019-02-19"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/DFCLAM/bigrafo/main/RDFgraph/fabio_module.rdf"/>
         <rdfs:comment>This file contains the knowledge graph for the Bigrafo project. It consists of the core release of FRBR, a portion of the FaBiO ontology, and a small set of classes/relations imported from existing ontologies like Schema.org, Dbpedia, and others.
 Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     </owl:Ontology>
