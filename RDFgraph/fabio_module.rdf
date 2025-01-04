@@ -8,7 +8,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:skos="http://www.w3.org/2008/05/skos#">
+     xmlns:skos1="http://www.w3.org/2008/05/skos#"
+     xmlns:bigrafo="https://www.onto.bigrafo.it#">
     <owl:Ontology rdf:about="http://purl.org/spar/fabio">
         <owl:versionIRI rdf:resource="http://purl.org/spar/fabio/2019-02-19"/>
         <owl:imports rdf:resource="http://purl.org/spar/frbr"/>
@@ -822,6 +823,28 @@ Date may be used to express temporal information at any level of granularity. Re
     
 
 
+    <!-- http://purl.org/spar/fabio/ArchivalDocumentSet -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/ArchivalDocumentSet">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/ExpressionCollection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#part"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spar/fabio/ArchivalDocument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#part"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/spar/fabio/ArchivalDocument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A collection of archival document.</rdfs:comment>
+        <rdfs:label>archival document set</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/spar/fabio/ArchivalRecord -->
 
     <owl:Class rdf:about="http://purl.org/spar/fabio/ArchivalRecord">
@@ -881,6 +904,16 @@ Date may be used to express temporal information at any level of granularity. Re
         <dc:description xml:lang="en">A fabio:Expression can only have part or be part of another fabio:Expression.  Moreover, it can be a representation only of a fabio:Work, and  it can be embodied only in fabio:Manifestation(s).</dc:description>
         <rdfs:comment xml:lang="en">A subclass of FRBR expression, restricted to expressions of fabio:Works.  For your latest research paper, the preprint submitted to the publisher, and the final published version to which the publisher assigned a unique digital object identifier, are both expressions of the same work.  </rdfs:comment>
         <rdfs:label xml:lang="en">expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/fabio/ExpressionCollection -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/ExpressionCollection">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Expression"/>
+        <rdfs:comment>A collection of expressions, for example a periodical or a book series.</rdfs:comment>
+        <rdfs:label>expression collection</rdfs:label>
     </owl:Class>
     
 
