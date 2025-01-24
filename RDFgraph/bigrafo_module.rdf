@@ -91,7 +91,11 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
 
     <!-- http://dbpedia.org/ontology/Genre -->
 
-    <owl:Class rdf:about="http://dbpedia.org/ontology/Genre"/>
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Genre">
+        <owl:disjointWith rdf:resource="http://purl.org/vocab/frbr/core#Endeavour"/>
+        <owl:disjointWith rdf:resource="http://purl.org/vocab/frbr/core#ResponsibleEntity"/>
+        <owl:disjointWith rdf:resource="http://purl.org/vocab/frbr/core#Subject"/>
+    </owl:Class>
     
 
 
@@ -110,6 +114,9 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/Genre"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.org/vocab/frbr/core#ResponsibleEntity"/>
+        <owl:disjointWith rdf:resource="http://purl.org/vocab/frbr/core#Subject"/>
+        <owl:disjointWith rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
     </owl:Class>
     
 
@@ -135,13 +142,18 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
 
     <!-- http://purl.org/vocab/frbr/core#ResponsibleEntity -->
 
-    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#ResponsibleEntity"/>
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#ResponsibleEntity">
+        <owl:disjointWith rdf:resource="http://purl.org/vocab/frbr/core#Subject"/>
+        <owl:disjointWith rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+    </owl:Class>
     
 
 
     <!-- http://purl.org/vocab/frbr/core#Subject -->
 
-    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Subject"/>
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Subject">
+        <owl:disjointWith rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+    </owl:Class>
     
 
 
@@ -159,6 +171,15 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://www.onto.bigrafo.it#cataloghi -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#cataloghi">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+        <rdfs:label>Cataloghi</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -189,6 +210,42 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     
 
 
+    <!-- https://www.onto.bigrafo.it#interviste_in_rivista -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#interviste_in_rivista">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+        <rdfs:label>Interviste in rivista</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#interviste_interventi_in_volume -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#interviste_interventi_in_volume">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+        <rdfs:label>Interviste / Interventi in volume</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#lettere -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#lettere">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Genre"/>
+        <rdfs:label>Lettere</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#lettere_in_rivista -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#lettere_in_rivista">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+        <rdfs:label>Lettere in rivista</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.onto.bigrafo.it#lettere_in_volume -->
 
     <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#lettere_in_volume">
@@ -212,6 +269,15 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#narrativa">
         <rdf:type rdf:resource="http://dbpedia.org/ontology/Genre"/>
         <rdfs:label>Narrativa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#note_autobiografiche_in_rivista -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#note_autobiografiche_in_rivista">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+        <rdfs:label>Note autobiografiche in rivista</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -279,6 +345,15 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     
 
 
+    <!-- https://www.onto.bigrafo.it#prefazioni_introduzioni_postfazioni -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#prefazioni_introduzioni_postfazioni">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+        <rdfs:label>Prefazioni/Introduzioni/Postfazioni</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.onto.bigrafo.it#prosa_in_rivista -->
 
     <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#prosa_in_rivista">
@@ -306,6 +381,24 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     
 
 
+    <!-- https://www.onto.bigrafo.it#recensione -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#recensione">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+        <rdfs:label>Recensione</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#saggio_in_rivista_articolo_di_giornale -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#saggio_in_rivista_articolo_di_giornale">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+        <rdfs:label>Saggio in rivista / Articolo di giornale</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.onto.bigrafo.it#saggio_in_volume -->
 
     <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#saggio_in_volume">
@@ -324,11 +417,38 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     
 
 
+    <!-- https://www.onto.bigrafo.it#scritti_teatrali_in_rivista -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#scritti_teatrali_in_rivista">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+        <rdfs:label>Scritti teatrali in rivista</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#teatro -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#teatro">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Genre"/>
+        <rdfs:label>Teatro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.onto.bigrafo.it#testi_per_film -->
 
     <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#testi_per_film">
         <rdf:type rdf:resource="http://dbpedia.org/ontology/Genre"/>
         <rdfs:label>Testi per film</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.onto.bigrafo.it#traduzione_in_volumi_autori_vari -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#traduzione_in_volumi_autori_vari">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+        <rdfs:label>Traduzione in volumi di autori vari</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -342,33 +462,21 @@ Engineered by Laura Antonietti and Emilio Sanfilippo</rdfs:comment>
     
 
 
+    <!-- https://www.onto.bigrafo.it#traduzioni_su_rivista -->
+
+    <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#traduzioni_su_rivista">
+        <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
+        <rdfs:label>Traduzioni su rivista</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.onto.bigrafo.it#voci_enciclopediche -->
 
     <owl:NamedIndividual rdf:about="https://www.onto.bigrafo.it#voci_enciclopediche">
         <rdf:type rdf:resource="https://www.onto.bigrafo.it#PublicationType"/>
         <rdfs:label>Voci enciclopediche</rdfs:label>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://dbpedia.org/ontology/Genre"/>
-            <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Endeavour"/>
-            <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#ResponsibleEntity"/>
-            <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Subject"/>
-            <rdf:Description rdf:about="https://www.onto.bigrafo.it#PublicationType"/>
-        </owl:members>
-    </rdf:Description>
 </rdf:RDF>
 
 
